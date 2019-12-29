@@ -1,6 +1,5 @@
 package com.liukhtenko.xmlxsdparsing.entity;
 
-import java.util.Objects;
 
 public class Paper {
     private String title;
@@ -73,32 +72,43 @@ public class Paper {
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
         Paper paper = (Paper) o;
         return monthly == paper.monthly &&
-                yearOfFoundation == paper.yearOfFoundation &&  // FIXME: 27.12.2019
-                Objects.equals(title, paper.title) &&
-                Objects.equals(type, paper.type) &&
-                Objects.equals(subscriptionIndex, paper.subscriptionIndex) &&
-                Objects.equals(visualCharacteristics, paper.visualCharacteristics);
+                yearOfFoundation == paper.yearOfFoundation &&
+                title.equals(paper.title) &&
+                type.equals(paper.type) &&
+                subscriptionIndex.equals(paper.subscriptionIndex) &&
+                visualCharacteristics.equals(paper.visualCharacteristics);
     }
 
     @Override
-    public int hashCode() {  // FIXME: 27.12.2019
-        return Objects.hash(title, type, subscriptionIndex, monthly, yearOfFoundation, visualCharacteristics);
+    public int hashCode() {
+        final int prime = 31;
+        int result = 1;
+        result = prime * result + ((title == null) ? 0 : title.hashCode());
+        result = prime * result + ((type == null) ? 0 : type.hashCode());
+        result = prime * result + ((subscriptionIndex == null) ? 0 : subscriptionIndex.hashCode());
+        result = prime * result + yearOfFoundation;
+        result = prime * result + ((visualCharacteristics == null) ? 0 : visualCharacteristics.hashCode());
+        return result;
     }
 
     @Override
     public String toString() {
-        return "Paper{" +
-                "title='" + title + '\'' +  // FIXME: 27.12.2019
-                ", type='" + type + '\'' +
-                ", subscriptionIndex='" + subscriptionIndex + '\'' +
-                ", monthly=" + monthly +
-                ", yearOfFoundation=" + yearOfFoundation +
-                ", visualCharacteristics=" + visualCharacteristics +
-                '}';
+        StringBuilder sb = new StringBuilder();
+        sb.append("Paper{title='").append(title).append('\'');
+        sb.append(", type='").append(type).append('\'');
+        sb.append(", subscriptionIndex='").append(subscriptionIndex).append('\'');
+        sb.append(", monthly=").append(monthly).append('\'');
+        sb.append(", yearOfFoundation=").append(yearOfFoundation);
+        sb.append(", visualCharacteristics=").append(visualCharacteristics).append('}');
+        return sb.toString();
     }
 
     public static class VisualCharacteristics {
@@ -109,9 +119,9 @@ public class Paper {
         public VisualCharacteristics() {
         }
 
-        public VisualCharacteristics(boolean colored, int pageSizec, boolean glossy) {
+        public VisualCharacteristics(boolean colored, int pageSize, boolean glossy) {
             this.colored = colored;
-            this.pageSize = pageSizec;
+            this.pageSize = pageSize;
             this.glossy = glossy;
         }
 
@@ -127,8 +137,8 @@ public class Paper {
             return pageSize;
         }
 
-        public void setPageSize(int pageSizec) {
-            this.pageSize = pageSizec;
+        public void setPageSize(int pageSize) {
+            this.pageSize = pageSize;
         }
 
         public boolean isGlossy() {
@@ -143,7 +153,7 @@ public class Paper {
         public boolean equals(Object o) {
             if (this == o) return true;
             if (o == null || getClass() != o.getClass()) return false;
-            VisualCharacteristics that = (VisualCharacteristics) o;  // FIXME: 27.12.2019
+            VisualCharacteristics that = (VisualCharacteristics) o;
             return colored == that.colored &&
                     pageSize == that.pageSize &&
                     glossy == that.glossy;
@@ -151,16 +161,17 @@ public class Paper {
 
         @Override
         public int hashCode() {
-            return Objects.hash(colored, pageSize, glossy); // FIXME: 27.12.2019
+            int result = 31 + pageSize;
+            return result;
         }
 
         @Override
-        public String toString() {  // FIXME: 27.12.2019
-            return "VisualCharacteristics{" +
-                    "colored=" + colored +
-                    ", pageSize=" + pageSize +
-                    ", glossy=" + glossy +
-                    '}';
+        public String toString() {
+            StringBuilder sb = new StringBuilder();
+            sb.append("VisualCharacteristics{colored=").append(colored);
+            sb.append(", pageSize=").append(pageSize);
+            sb.append(", glossy=").append(glossy).append('}');
+            return sb.toString();
         }
     }
 }

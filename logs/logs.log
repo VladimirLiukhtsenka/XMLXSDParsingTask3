@@ -1,1 +1,2 @@
-2019-12-28 23:01:19.629 [main] 2622 INFO  com.liukhtenko.xmlxsdparsing.validator.ValidatorSAXXSD - D:\Java\Projects\XMLXSDParsing\data\periodical.xml validating is ended.
+2019-12-29 14:03:24.741 [main] 2168 ERROR com.liukhtenko.xmlxsdparsing.parser.PeriodicalStAXBuilder - Parsing error! com.liukhtenko.xmlxsdparsing.exception.CustomException: PeriodicalEnum does not have such a value: paper
+2019-12-29 14:03:51.822 [main] 1881 ERROR com.liukhtenko.xmlxsdparsing.parser.PeriodicalStAXBuilder - Parsing error! com.liukhtenko.xmlxsdparsing.exception.CustomException: PeriodicalEnum does not have such a value: paper

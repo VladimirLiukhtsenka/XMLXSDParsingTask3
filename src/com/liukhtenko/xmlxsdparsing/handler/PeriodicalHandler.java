@@ -1,5 +1,6 @@
 package com.liukhtenko.xmlxsdparsing.handler;
 
+import com.liukhtenko.xmlxsdparsing.constant.CustomConstant;
 import com.liukhtenko.xmlxsdparsing.entity.Paper;
 import com.liukhtenko.xmlxsdparsing.entity.PeriodicalEnum;
 import com.liukhtenko.xmlxsdparsing.exception.CustomException;
@@ -14,8 +15,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 public class PeriodicalHandler extends DefaultHandler {
-    private static final String NAME = "paper";
-    static Logger logger = LogManager.getLogger();
+    private static Logger logger = LogManager.getLogger();
     private Set<Paper> papers;
     private Paper current = null;
     private PeriodicalEnum currentEnum = null;
@@ -31,7 +31,7 @@ public class PeriodicalHandler extends DefaultHandler {
     }
 
     public void startElement(String uri, String localName, String qName, Attributes attrs) {
-        if (NAME.equals(localName)) {
+        if (CustomConstant.PAPER.equals(localName)) {
             current = new Paper();
             current.setTitle(attrs.getValue(0));
             if (attrs.getLength() == 2) {
@@ -52,7 +52,7 @@ public class PeriodicalHandler extends DefaultHandler {
     }
 
     public void endElement(String uri, String localName, String qName) {
-        if (NAME.equals(localName)) {
+        if (CustomConstant.PAPER.equals(localName)) {
             papers.add(current);
         }
     }
@@ -80,8 +80,7 @@ public class PeriodicalHandler extends DefaultHandler {
                     current.setYearOfFoundation(Integer.parseInt(s));
                     break;
                 default:
-                    throw new EnumConstantNotPresentException(  // FIXME: 28.12.2019 
-                            currentEnum.getDeclaringClass(), currentEnum.name());
+                    logger.log(Level.ERROR, currentEnum.name() + "does not exist in " + currentEnum.getDeclaringClass());
             }
         }
         currentEnum = null;

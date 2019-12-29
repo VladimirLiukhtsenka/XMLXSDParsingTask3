@@ -1,19 +1,20 @@
 package com.liukhtenko.xmlxsdparsing.entity;
 
+import com.liukhtenko.xmlxsdparsing.constant.CustomConstant;
 import com.liukhtenko.xmlxsdparsing.exception.CustomException;
 
 public enum PeriodicalEnum {
-    PAPERS("papers"),
-    TITLE("title"),
-    TYPE("type"),
-    PAPER("paper"),
-    COLORED("colored"),
-    PAGE_SIZE("pageSize"),
-    GLOSSY("glossy"),
-    SUBSCRIPTION_INDEX("subscriptionIndex"),
-    MONTHLY("monthly"),
-    YEAR_OF_FOUNDATION("yearOfFoundation"),
-    VISUAL_CHARACTERISTICS("visualCharacteristics");
+    PAPERS(CustomConstant.PAPERS),
+    TITLE(CustomConstant.TITLE),
+    TYPE(CustomConstant.TYPE),
+    PAPER(CustomConstant.PAPER),
+    COLORED(CustomConstant.COLORED),
+    PAGE_SIZE(CustomConstant.PAGE_SIZE),
+    GLOSSY(CustomConstant.GLOSSY),
+    SUBSCRIPTION_INDEX(CustomConstant.SUBSCRIPTION_INDEX),
+    MONTHLY(CustomConstant.MONTHLY),
+    YEAR_OF_FOUNDATION(CustomConstant.YEAR_OF_FOUNDATION),
+    VISUAL_CHARACTERISTICS(CustomConstant.VISUAL_CHARACTERISTICS);
 
     private String value;
 
@@ -27,10 +28,10 @@ public enum PeriodicalEnum {
 
     public static String getNameByValue(String value) throws CustomException {
         for (PeriodicalEnum e : PeriodicalEnum.values()) {
-            if (e.value == value) {
+            if (e.value.equals(value)) {
                 return e.name();
             }
         }
-        throw new CustomException("PeriodicalEnum does not have such a value: "+value);
+        throw new CustomException("PeriodicalEnum does not have such a value: " + value);
     }
 }

@@ -7,7 +7,7 @@ import org.xml.sax.SAXParseException;
 import org.xml.sax.helpers.DefaultHandler;
 
 public class PeriodicalErrorHandler extends DefaultHandler implements ErrorHandler {
-    static Logger logger = LogManager.getLogger();
+    private static Logger logger = LogManager.getLogger();
 
     public void warning(SAXParseException e) {
         logger.warn(getLineAddress(e) + "-" + e.getMessage());
@@ -24,5 +24,4 @@ public class PeriodicalErrorHandler extends DefaultHandler implements ErrorHandl
     private String getLineAddress(SAXParseException e) {
         return e.getLineNumber() + " : " + e.getColumnNumber();
     }
-
 }

@@ -63,13 +63,13 @@ public class PeriodicalDOMBuilder extends AbstractPeriodicalBuilder {
                 paperElement, CustomConstant.YEAR_OF_FOUNDATION));
         paper.setYearOfFoundation(yearOfFound);
         Paper.VisualCharacteristics visualCharacteristics = new Paper.VisualCharacteristics();
-        Element visualCharactElement = (Element) paperElement.getElementsByTagName(
+        Element visualCharacterElement = (Element) paperElement.getElementsByTagName(
                 CustomConstant.VISUAL_CHARACTERISTICS).item(0);
-        boolean colored = Boolean.parseBoolean(getElementTextContent(visualCharactElement, CustomConstant.COLORED));
+        boolean colored = Boolean.parseBoolean(getElementTextContent(visualCharacterElement, CustomConstant.COLORED));
         visualCharacteristics.setColored(colored);
-        int pageSize = Integer.parseInt(getElementTextContent(visualCharactElement, CustomConstant.PAGE_SIZE));
+        int pageSize = Integer.parseInt(getElementTextContent(visualCharacterElement, CustomConstant.PAGE_SIZE));
         visualCharacteristics.setPageSize(pageSize);
-        boolean glossy = Boolean.parseBoolean(getElementTextContent(visualCharactElement, CustomConstant.GLOSSY));
+        boolean glossy = Boolean.parseBoolean(getElementTextContent(visualCharacterElement, CustomConstant.GLOSSY));
         visualCharacteristics.setGlossy(glossy);
         paper.setVisualCharacteristics(visualCharacteristics);
         return paper;

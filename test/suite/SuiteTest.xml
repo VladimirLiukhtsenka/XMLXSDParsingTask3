@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name ="OrbTest">
+    <test name="All tests">
+        <classes>
+            <class name="com.liukhtenko.xmlxsdparsing.parser.DirectorOfBuilderTest"/>
+            <class name="com.liukhtenko.xmlxsdparsing.parser.PeriodicalDOMBuilderTest"/>
+            <class name="com.liukhtenko.xmlxsdparsing.parser.PeriodicalSAXBuilderTest"/>
+            <class name="com.liukhtenko.xmlxsdparsing.parser.PeriodicalStAXBuilderTest"/>
+        </classes>
+    </test>
+</suite>

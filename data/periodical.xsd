@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+            targetNamespace="http://www.liukhtenko.com/papers/"
+            xmlns:tns="http://www.liukhtenko.com/papers/"
+            elementFormDefault="qualified">
+    <element name="papers" >
+        <complexType>
+            <sequence>
+                <element name="paper"
+                         type="tns:Paper"
+                         minOccurs="2"
+                         maxOccurs="unbounded"/>
+            </sequence>
+        </complexType>
+    </element>
+    <complexType name="Paper" mixed="true">
+        <sequence>
+            <element name="visualCharacteristics" type="tns:VisualCharacteristics"/>
+            <element name="subscriptionIndex" type="ID"/>
+            <element name="monthly" type="boolean"/>
+            <element name="yearOfFoundation" type="gYear"/>
+        </sequence>
+        <attribute name="title" type="tns:title" use="required"/>
+        <attribute name="type" use="optional" default="periodical">
+            <simpleType>
+                <restriction base="string">
+                    <enumeration value="newspaper"/>
+                    <enumeration value="magazine"/>
+                    <enumeration value="booklet"/>
+                    <enumeration value="periodical"/>
+                </restriction>
+            </simpleType>
+        </attribute>
+    </complexType>
+    <simpleType name="title">
+        <restriction base="string">
+            <pattern value="[а-яА-яeЁ !?,.:\-\w]+"/>
+        </restriction>
+    </simpleType>
+    <complexType name="VisualCharacteristics">
+        <sequence>
+            <element name="colored" type="boolean"/>
+            <element name="pageSize" type="tns:PageSize"/>
+            <element name="glossy" type="boolean"/>
+        </sequence>
+    </complexType>
+    <simpleType name="PageSize">
+        <restriction base="positiveInteger">
+            <maxInclusive value="100"/>
+            <minExclusive value="1"/>
+        </restriction>
+    </simpleType>
+</schema>

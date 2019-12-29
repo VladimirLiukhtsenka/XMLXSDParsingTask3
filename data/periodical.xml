@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<papers xmlns="http://www.liukhtenko.com/papers/"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xsi:schemaLocation="http://www.liukhtenko.com/papers/ periodical.xsd">
+    <paper title="100 ВКУСНЫХ БЛЮД" type="newspaper">
+        <visualCharacteristics>
+            <colored>false</colored>
+            <pageSize>25</pageSize>
+            <glossy>false</glossy>
+        </visualCharacteristics>
+        <subscriptionIndex>П1711</subscriptionIndex>>
+        <monthly>false</monthly>
+        <yearOfFoundation>2016</yearOfFoundation>
+    </paper>
+    <paper title="АНОМАЛЬНЫЕ НОВОСТИ" type="newspaper">
+        <visualCharacteristics>
+            <colored>true</colored>
+            <pageSize>30</pageSize>
+            <glossy>false</glossy>
+        </visualCharacteristics>
+        <subscriptionIndex>П1153</subscriptionIndex>>
+        <monthly>true</monthly>
+        <yearOfFoundation>2010</yearOfFoundation>
+    </paper>
+    <paper title="КУЛЬТУРА" type="newspaper">
+        <visualCharacteristics>
+            <colored>false</colored>
+            <pageSize>42</pageSize>
+            <glossy>false</glossy>
+        </visualCharacteristics>
+        <subscriptionIndex>П2043</subscriptionIndex>>
+        <monthly>true</monthly>
+        <yearOfFoundation>1995</yearOfFoundation>
+    </paper>
+    <paper title="МИР СМЕХА" type="newspaper">
+        <visualCharacteristics>
+            <colored>false</colored>
+            <pageSize>15</pageSize>
+            <glossy>false</glossy>
+        </visualCharacteristics>
+        <subscriptionIndex>П1162</subscriptionIndex>>
+        <monthly>true</monthly>
+        <yearOfFoundation>2001</yearOfFoundation>
+    </paper>
+    <paper title="ОДНАКО, ЖИЗНЬ!" type="newspaper">
+        <visualCharacteristics>
+            <colored>false</colored>
+            <pageSize>22</pageSize>
+            <glossy>false</glossy>
+        </visualCharacteristics>
+        <subscriptionIndex>П2780</subscriptionIndex>>
+        <monthly>true</monthly>
+        <yearOfFoundation>2009</yearOfFoundation>
+    </paper>
+    <paper title="ОХОТА И РЫБАЛКА!" type="newspaper">
+        <visualCharacteristics>
+            <colored>false</colored>
+            <pageSize>30</pageSize>
+            <glossy>false</glossy>
+        </visualCharacteristics>
+        <subscriptionIndex>П21800</subscriptionIndex>>
+        <monthly>false</monthly>
+        <yearOfFoundation>2005</yearOfFoundation>
+    </paper>
+    <paper title="СПИД-ИНФО!" type="newspaper">
+        <visualCharacteristics>
+            <colored>true</colored>
+            <pageSize>25</pageSize>
+            <glossy>false</glossy>
+        </visualCharacteristics>
+        <subscriptionIndex>П6049</subscriptionIndex>>
+        <monthly>true</monthly>
+        <yearOfFoundation>2000</yearOfFoundation>
+    </paper>
+    <paper title="ЮРИДИЧЕСКИЙ ОТДЕЛ" type="newspaper">
+        <visualCharacteristics>
+            <colored>false</colored>
+            <pageSize>43</pageSize>
+            <glossy>false</glossy>
+        </visualCharacteristics>
+        <subscriptionIndex>П33191</subscriptionIndex>>
+        <monthly>true</monthly>
+        <yearOfFoundation>2010</yearOfFoundation>
+    </paper>
+    <paper title="STATUSPRAESENS" type="magazine">
+        <visualCharacteristics>
+            <colored>true</colored>
+            <pageSize>50</pageSize>
+            <glossy>true</glossy>
+        </visualCharacteristics>
+        <subscriptionIndex>П25135</subscriptionIndex>>
+        <monthly>false</monthly>
+        <yearOfFoundation>2007</yearOfFoundation>
+    </paper>
+    <paper title="AUTOMATION OF CONTROL PROCESSES" type="magazine">
+        <visualCharacteristics>
+            <colored>true</colored>
+            <pageSize>35</pageSize>
+            <glossy>true</glossy>
+        </visualCharacteristics>
+        <subscriptionIndex>П45721</subscriptionIndex>>
+        <monthly>false</monthly>
+        <yearOfFoundation>2014</yearOfFoundation>
+    </paper>
+    <paper title="ВЕСЁЛЫЙ ЗАТЕЙНИК" type="magazine">
+        <visualCharacteristics>
+            <colored>true</colored>
+            <pageSize>30</pageSize>
+            <glossy>true</glossy>
+        </visualCharacteristics>
+        <subscriptionIndex>П1926</subscriptionIndex>>
+        <monthly>false</monthly>
+        <yearOfFoundation>2015</yearOfFoundation>
+    </paper>
+    <paper title="ВРАЧ" type="magazine">
+        <visualCharacteristics>
+            <colored>true</colored>
+            <pageSize>55</pageSize>
+            <glossy>true</glossy>
+        </visualCharacteristics>
+        <subscriptionIndex>П3011</subscriptionIndex>>
+        <monthly>false</monthly>
+        <yearOfFoundation>2010</yearOfFoundation>
+    </paper>
+    <paper title="ИСКАТЕЛЬ" type="magazine">
+        <visualCharacteristics>
+            <colored>true</colored>
+            <pageSize>20</pageSize>
+            <glossy>true</glossy>
+        </visualCharacteristics>
+        <subscriptionIndex>П2017</subscriptionIndex>>
+        <monthly>true</monthly>
+        <yearOfFoundation>2009</yearOfFoundation>
+    </paper>
+    <paper title="ПОГРАНИЧНИК" type="magazine">
+        <visualCharacteristics>
+            <colored>true</colored>
+            <pageSize>25</pageSize>
+            <glossy>true</glossy>
+        </visualCharacteristics>
+        <subscriptionIndex>П3790</subscriptionIndex>>
+        <monthly>true</monthly>
+        <yearOfFoundation>1999</yearOfFoundation>
+    </paper>
+    <paper title="CONTROL SCIENCES" type="magazine">
+        <visualCharacteristics>
+            <colored>true</colored>
+            <pageSize>50</pageSize>
+            <glossy>true</glossy>
+        </visualCharacteristics>
+        <subscriptionIndex>П38006</subscriptionIndex>>
+        <monthly>false</monthly>
+        <yearOfFoundation>2007</yearOfFoundation>
+    </paper>
+    <paper title="ЭНЕРГЕТИК" type="magazine">
+        <visualCharacteristics>
+            <colored>true</colored>
+            <pageSize>45</pageSize>
+            <glossy>true</glossy>
+        </visualCharacteristics>
+        <subscriptionIndex>П71108</subscriptionIndex>>
+        <monthly>true</monthly>
+        <yearOfFoundation>2010</yearOfFoundation>
+    </paper>
+</papers>

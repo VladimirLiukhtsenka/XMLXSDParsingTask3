@@ -16,7 +16,7 @@ import javax.xml.validation.Validator;
 import java.io.File;
 import java.io.IOException;
 
-public class ValidatorSAXXSD {
+public class ValidatorXSD {
     private static Logger logger = LogManager.getLogger();
     public static void runValidation() {
         String language = XMLConstants.W3C_XML_SCHEMA_NS_URI;
@@ -31,7 +31,7 @@ public class ValidatorSAXXSD {
             PeriodicalErrorHandler sh = new PeriodicalErrorHandler();
             validator.setErrorHandler(sh);
             validator.validate(source);
-            logger.log(Level.INFO, fileName + " validating is ended.");
+            logger.log(Level.INFO, fileName + " validating is ended");
         } catch (IOException | SAXException e) {
             logger.log(Level.ERROR, fileName + " is not valid because "
                     + e.getMessage());

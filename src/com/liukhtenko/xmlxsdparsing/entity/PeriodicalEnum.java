@@ -32,6 +32,6 @@ public enum PeriodicalEnum {
                 return e.name();
             }
         }
-        throw new CustomException("PeriodicalEnum does not have such a value: " + value);
+        throw new CustomException("PeriodicalEnum does not have such value: " + value);
     }
 }

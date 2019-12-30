@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<suite name ="OrbTest">
+<suite name ="XMLXSDTest">
     <test name="All tests">
         <classes>
             <class name="com.liukhtenko.xmlxsdparsing.parser.DirectorOfBuilderTest"/>

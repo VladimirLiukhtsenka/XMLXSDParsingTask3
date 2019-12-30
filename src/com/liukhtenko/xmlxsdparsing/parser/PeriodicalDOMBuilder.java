@@ -59,8 +59,7 @@ public class PeriodicalDOMBuilder extends AbstractPeriodicalBuilder {
         paper.setSubscriptionIndex(getElementTextContent(paperElement, CustomConstant.SUBSCRIPTION_INDEX));
         boolean monthly = Boolean.parseBoolean(getElementTextContent(paperElement, CustomConstant.MONTHLY));
         paper.setMonthly(monthly);
-        int yearOfFound = Integer.parseInt(getElementTextContent(
-                paperElement, CustomConstant.YEAR_OF_FOUNDATION));
+        int yearOfFound = Integer.parseInt(getElementTextContent(paperElement, CustomConstant.YEAR_OF_FOUNDATION));
         paper.setYearOfFoundation(yearOfFound);
         Paper.VisualCharacteristics visualCharacteristics = new Paper.VisualCharacteristics();
         Element visualCharacterElement = (Element) paperElement.getElementsByTagName(

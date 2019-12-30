@@ -1,6 +1,5 @@
 package com.liukhtenko.xmlxsdparsing.entity;
 
-
 public class Paper {
     private String title;
     private String type;
@@ -151,8 +150,12 @@ public class Paper {
 
         @Override
         public boolean equals(Object o) {
-            if (this == o) return true;
-            if (o == null || getClass() != o.getClass()) return false;
+            if (this == o) {
+                return true;
+            }
+            if (o == null || getClass() != o.getClass()) {
+                return false;
+            }
             VisualCharacteristics that = (VisualCharacteristics) o;
             return colored == that.colored &&
                     pageSize == that.pageSize &&

@@ -2,11 +2,10 @@ package com.liukhtenko.xmlxsdparsing.handler;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.xml.sax.ErrorHandler;
 import org.xml.sax.SAXParseException;
 import org.xml.sax.helpers.DefaultHandler;
 
-public class PeriodicalErrorHandler extends DefaultHandler implements ErrorHandler {
+public class PeriodicalErrorHandler extends DefaultHandler {
     private static Logger logger = LogManager.getLogger();
 
     public void warning(SAXParseException e) {

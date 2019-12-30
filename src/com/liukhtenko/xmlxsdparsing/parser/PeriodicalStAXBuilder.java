@@ -43,9 +43,9 @@ public class PeriodicalStAXBuilder extends AbstractPeriodicalBuilder {
                 }
             }
         } catch (XMLStreamException | CustomException e) {
-            logger.log(Level.ERROR, "Parsing error! " + e);
+            logger.log(Level.ERROR, "Parsing error: " + e);
         } catch (FileNotFoundException ex) {
-            logger.log(Level.ERROR, "File " + fileName + " not found! " + ex);
+            logger.log(Level.ERROR, "File " + fileName + " not found: " + ex);
         } finally {
             try {
                 if (inputStream != null) {
@@ -77,12 +77,12 @@ public class PeriodicalStAXBuilder extends AbstractPeriodicalBuilder {
                             paper.setSubscriptionIndex(getXMLText(reader));
                             break;
                         case MONTHLY:
-                            name = getXMLText(reader);
-                            paper.setMonthly(Boolean.parseBoolean(name));
+                            boolean monthly = Boolean.parseBoolean(getXMLText(reader));
+                            paper.setMonthly(monthly);
                             break;
                         case YEAR_OF_FOUNDATION:
-                            name = getXMLText(reader);
-                            paper.setYearOfFoundation(Integer.parseInt(name));
+                            int year = Integer.parseInt(getXMLText(reader));
+                            paper.setYearOfFoundation(year);
                             break;
                         case VISUAL_CHARACTERISTICS:
                             paper.setVisualCharacteristics(getXMLVisualCarat(reader));
@@ -111,13 +111,16 @@ public class PeriodicalStAXBuilder extends AbstractPeriodicalBuilder {
                     name = PeriodicalEnum.getNameByValue(reader.getLocalName());
                     switch (PeriodicalEnum.valueOf(name)) {
                         case COLORED:
-                            visualCharacteristics.setColored(Boolean.parseBoolean(getXMLText(reader)));
+                            boolean colored = Boolean.parseBoolean(getXMLText(reader));
+                            visualCharacteristics.setColored(colored);
                             break;
                         case PAGE_SIZE:
-                            visualCharacteristics.setPageSize(Integer.parseInt(getXMLText(reader)));
+                            int pageSize = Integer.parseInt(getXMLText(reader));
+                            visualCharacteristics.setPageSize(pageSize);
                             break;
                         case GLOSSY:
-                            visualCharacteristics.setGlossy(Boolean.parseBoolean(getXMLText(reader)));
+                            boolean glossy = Boolean.parseBoolean(getXMLText(reader));
+                            visualCharacteristics.setGlossy(glossy);
                             break;
                     }
                     break;

@@ -1,8 +1,0 @@
-2019-12-29 23:01:25.063 [main] 3015 INFO  com.liukhtenko.xmlxsdparsing.validator.ValidatorSAXXSD - data\periodical.xml validating is ended.
-2019-12-29 23:01:25.123 [main] 3075 ERROR com.liukhtenko.xmlxsdparsing.parser.PeriodicalDOMBuilder - File I/O error: java.io.FileNotFoundException: D:\Java\Projects\XMLXSDParsing\Wrong\path.xml (Системе не удается найти указанный путь)
-2019-12-29 23:01:25.183 [main] 3135 INFO  com.liukhtenko.xmlxsdparsing.validator.ValidatorSAXXSD - data\periodical.xml validating is ended.
-2019-12-29 23:01:25.273 [main] 3225 INFO  com.liukhtenko.xmlxsdparsing.validator.ValidatorSAXXSD - data\periodical.xml validating is ended.
-2019-12-29 23:01:25.323 [main] 3275 INFO  com.liukhtenko.xmlxsdparsing.validator.ValidatorSAXXSD - data\periodical.xml validating is ended.
-2019-12-29 23:01:25.383 [main] 3335 ERROR com.liukhtenko.xmlxsdparsing.parser.PeriodicalDOMBuilder - File I/O error: java.io.FileNotFoundException: D:\Java\Projects\XMLXSDParsing\Wrong\path.xml (Системе не удается найти указанный путь)
-2019-12-29 23:01:25.413 [main] 3365 ERROR com.liukhtenko.xmlxsdparsing.parser.PeriodicalSAXBuilder - File I/O error: java.io.FileNotFoundException: D:\Java\Projects\XMLXSDParsing\Wrong\path.xml (Системе не удается найти указанный путь)
-2019-12-29 23:01:25.423 [main] 3375 ERROR com.liukhtenko.xmlxsdparsing.parser.PeriodicalStAXBuilder - File Wrong/path.xml not found! java.io.FileNotFoundException: Wrong\path.xml (Системе не удается найти указанный путь)
